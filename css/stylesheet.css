@@ -8,6 +8,7 @@ img{
 }
 #hero-page{
     position: relative;
+    height: 100vh;
 }
 .header{
     position: absolute;
@@ -30,10 +31,10 @@ img{
     margin: 0 auto;
 }
 .main-nav-custom ul li{
-    margin: 0 10px;
+    margin: 0 1vw;
 }
 .main-nav-custom ul li a{
-    font-size: 1.4vw;
+    font-size: 1.4vw !important;
     color: white !important;
     font-family: "Roboto";
 }
@@ -158,12 +159,19 @@ img{
 }
 .carousel-images{
     position: relative;
-
+    height: 100vh;
+    width: 100vw;
+}
+.carousel-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .carousel-content{
     position: absolute;
     top: 25%;
-    left:15%;
+    left:15% ;
     z-index: 30;
     text-align: center;
     color: #c9ab81;
@@ -181,19 +189,16 @@ img{
     line-height: 145px;
 }
 .carousel-content-p-wrapper {
-    max-width: 500px;
+    max-width: 50vw;
     margin: 30px auto;
 }
 .carousel-content-p-wrapper p{
     font-family: "Josefin Sans";
-    font-size: 1.6vw;
     line-height: 26px;
     color: white !important;
     font-weight: 200 !important;
 }
 .banner-button{
-    width: 10.4vw;
-    height: 50px;
     border-radius:0%;
     border-color: #c9ab81 !important;
     border: 1px solid ;
@@ -210,33 +215,33 @@ img{
 
 
 .about{
-
+    width: 100vw;
+    height: auto;
     background-color: black;
     position: relative;
+    margin-bottom: 80px;
 }
 .about-text{
-    margin-top: 160px;
     max-width: 500px;
     text-align: center;
     color: #c9ab81;
+    margin-top: 150px;
 }
 .about-text h5{
     font-family: "Miniver";
     font-weight: 400;
     font-size: 1.3vw;
-    line-height:28px;
+
 }
 .about-text h3{
     font-family: "Caviar Dreams";
     font-weight: 700;
-    line-height: 61px;
     font-size: 3.3vw;
 }
 .about-text p{
     font-family: "Josefin Sans";
     font-weight: 300;
     font-size: 1.4vw;
-    line-height: 29px;
     color: #fff !important;
 }
 
@@ -357,8 +362,18 @@ img{
 
 .specialities-block{
     background-color: transparent !important;
+    height:50vw;
 }
-
+.specialities-block-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.specialities-block-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .specialities-background-image{
     position: absolute;
     top: -20%;
@@ -405,10 +420,10 @@ img{
     margin-top: 10px;
 }
 .our-menu-block-text h5{
+
     line-height: 29px;
     font-weight: 700;
     font-family: "Caviar Dreams";
-    font-size: 1.3vw;
     color: #c9ab81;
 }
 .our-menu-block-text span{
@@ -459,6 +474,7 @@ img{
     color: #c9ab81 !important;
     border: #c9ab81cf solid 0.5px;
     margin: 0 auto;
+    text-align: center;
 }
 .booking-picker ::placeholder{
     color: #c9ab81;
@@ -496,19 +512,19 @@ img{
 
 
 .footer-text{
-    max-width: 350px;
     margin: 150px 0;
     text-align: center;
 }
 .footer-text h4{
-    font-size: 2.9vw;
+    font-size: 3.9vw;
     font-weight: 500;
     color: #c9ab81;
 }
 .footer-text p{
+
     font-family: "Josefin Sans";
-    font-size: 1.3vw;
-    line-height: 49px;
+    
+    line-height:1;
     font-weight: 300;
     text-transform: capitalize;
 }
@@ -524,6 +540,95 @@ img{
 }
 
 
+.icons-elem a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+.icons-elem a i{
+    font-size: 1.4vw;
+    margin-left: 20px;
+    color: white;
+    transition: 0.4s;
+}
+.icons-elem .user i{
+    margin-left: 0!important;
+}
+.icons-elem .user:hover i{
+    color: #C9AB81;
+}
+.icons-elem .heart:hover i{
+    color: #C9AB81;
+}
+.icons-elem .cart:hover i{
+    color: #C9AB81;
+}
+
+
+.header-overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: rgb(0 0 0 / 73%);
+}
+.overlay-close-btn{
+    position: relative;
+    top: 20px;
+    left: 90%;
+}
+.overlay-close-btn span{
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+.overlay-content{
+    position: relative;
+    top: 28%;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    
+}
+.overlay-search{
+    justify-content: space-evenly;
+}
+.overlay-search input{
+    max-width: 1080px;
+    border-radius: 0%;
+    background-color: rgba(254, 255, 255, 0.616);
+}
+.overlay-search::placeholder{
+    max-width: 600px;
+}
+.overlay-search button{
+    margin-left: 20px;
+    border-radius: 0%;
+    background-color: white;
+    color: black;
+    transition: 0.6s;
+}
+.overlay-search button:hover{
+    background-color: black;
+    color: white;
+    border: white solid 0.5px;
+}
+.search-wrapper{
+    margin: 0 auto;
+}
+
+
+
+
+
+  
+
+
+
+
+/* RESPONSIVENESS */
 
 
 
@@ -531,7 +636,106 @@ img{
 
 
 
+
+
+/* 2xl screen */
 @media (min-width:1441px) {
+
+
+    .booking-block{
+        margin-top: 0 !important;
+    }
+    .footer-text{
+        max-width: 26vw !important;
+
+    }
+    .footer-text p{
+        font-size: 1.3vw !important;
+    }
+
+    .our-menu-block-text h5{
+        font-size: 1.3vw !important;
+    }
+    .specialities-background-image{
+        display: block !important;
+    }
+    .reviews-block{
+        height: 50vw !important;
+    }
+    .booking-image{
+        display: block !important;
+    }
+    .about-images{
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .banner-button {
+        width: 12.4vw !important;
+        height: 4vw !important;
+    }
+
+    .carousel-content-p-wrapper p{
+        font-size: 1.6vw !important;
+    }
+    .carousel-content h2 {
+        font-family: "Metropolis 1920";
+        font-size: 7vw !important ;
+    }
+
+    .mobile-banner{
+        display: none !important;
+    }
+    .carousel-banner{
+        display: block !important;
+    }
+    .carousel-content h2 {
+        line-height:1;
+    }
+    .offcanvas {
+        max-width: 100% !important ;
+    }
+    /* .main-nav-custom ul li {
+        margin: 0 20px;
+    } */
+    .main-nav-custom ul li a{
+        font-size: 1.4vw;
+    }
+    .icons-elem{
+        display: block !important;
+    }
+    
+    .logo{
+        padding-left: 50px;
+    }
+    .tooltip-inner{
+        font-size: 0.9vw;
+        margin-left: -28px;
+    }
+
+
+    .main-nav-custom{
+        max-width: 82vw;
+    }
+    .overlay-content {
+        position: relative;
+        top: 40%;
+    }
+    .icons-elem a {
+        text-decoration: none;
+        margin-left: 24px;
+    }
+    .overlay-search button{
+        width: 200px;
+        height: 50px;
+    }
+    .header {
+        position: absolute;
+        top: 30px;
+        
+    }
+
     .carousel-content-p-wrapper
     {
         margin: 60px auto;
@@ -562,7 +766,89 @@ img{
         line-height: 81px;
     }
 }
-@media (max-width:1440px) {
+
+/* xl screen */
+@media (min-width:1025px) {
+    
+    .reviews-block{
+        height: 50vw !important;
+    }
+    .footer-text{
+        max-width: 26vw !important;
+
+    }
+    .footer-text p{
+        font-size: 1.3vw !important;
+    }
+    .booking-block{
+        margin-top: 0 !important;
+    }
+    .our-menu-block-text h5{
+        font-size: 1.3vw !important;
+    }
+    .booking-image{
+        display: block !important;
+    }
+    .specialities-background-image{
+        display: block !important;
+    }
+    .about-images{
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+
+    .banner-button {
+        width: 12.4vw !important;
+        height: 4vw !important;
+    }
+
+
+    .carousel-content-p-wrapper p{
+        font-size: 1.6vw !important;
+    }
+
+    .carousel-content h2 {
+        font-family: "Metropolis 1920";
+        font-size: 7vw !important ;
+    }
+
+    .mobile-banner{
+        display: none !important;
+    }
+    .carousel-banner{
+        display: block !important;
+    }
+    .carousel-content h2 {
+        line-height:1;
+    }
+    .offcanvas {
+        max-width: 100% !important ;
+    }
+    .header {
+        position: absolute;
+        top: 20px;  
+    }
+    .icons-elem{
+        display: block !important;
+    }
+    .logo{
+        padding-left: 20px;
+    }
+    .navbar-nav{
+        padding-left: 50px !important;
+    }
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        display: flex;
+        flex-grow: 0;
+        padding-right: 50px !important;
+        overflow-y: visible;
+    }
+    .icons-elem a {
+        text-decoration: none;
+        margin-left: -10px;
+    }
     .carousel-content-p-wrapper {
         max-width: 500px;
         margin: 20px auto;
@@ -578,11 +864,94 @@ img{
     }
 }
 
+/* lg screen*/
+@media (min-width:769px) {
 
-@media (max-width:1024px) {
-    .main-nav-custom ul li {
-        margin: 0 0px;
+
+
+    .booking-block{
+        margin-top: 0 !important;
     }
+    .footer-text{
+        max-width: 26vw !important;
+
+    }
+    .footer-text p{
+        font-size: 1.3vw !important;
+    }
+
+
+
+
+    .reviews-block{
+        height: 50vw !important;
+    }
+    .our-menu-block-text h5{
+        font-size: 1.3vw !important;
+    }
+    .booking-image{
+        display: block !important;
+    }
+    .specialities-background-image{
+        display: block !important;
+    }
+    .banner-button {
+        width: 12.4vw !important;
+        height: 4vw !important;
+    }
+    .about-images{
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+
+    .carousel-content-p-wrapper p{
+        font-size: 1.6vw !important;
+    }
+
+    .carousel-content h2 {
+        font-family: "Metropolis 1920";
+        font-size: 7vw !important ;
+    }
+    .mobile-banner{
+        display: none !important;
+    }
+    .carousel-banner{
+        display: block !important;
+    }
+    .carousel-content h2 {
+        line-height:1;
+    }
+    .offcanvas {
+        max-width: 100% !important ;
+    }
+    .icons-elem{
+        display: block !important;
+    }
+    .logo{
+        padding-left: 20px;
+    }
+    .header {
+        position: absolute;
+        top: 15px;  
+    }
+    .icons-elem a {
+        text-decoration: none;
+        margin-left: -20px;
+    }
+    .navbar-nav{
+        margin-left: 25px !important;
+    }
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        display: flex;
+        flex-grow: 0;
+        padding-right: 30px !important;
+        overflow-y: visible;
+    }
+    /* .main-nav-custom ul li {
+        margin: 0 0px;
+    } */
     .offcanvas.offcanvas-end {
         top: 0;
         right: 0;
@@ -591,7 +960,67 @@ img{
         transform: translateX(100%);
     }
 }
-@media (max-width:768px) {
+
+
+/*md screen*/
+@media (min-width:426px) {
+
+
+
+    .booking-block{
+        margin-top: 20px ;
+    }
+    .footer-text{
+        max-width: 26vw !important;
+
+    }
+    .footer-text p{
+        font-size: 2.3vw ;
+    }
+    .reviews-block{
+        height: 80vw;
+    }
+    .our-menu-block-text h5{
+        font-size: 1.3vw !important;
+    }
+    .booking-image{
+        display: none;
+    }
+    .specialities-background-image{
+        display: none;
+    }
+    .banner-button {
+        width: 12.4vw !important;
+        height: 4vw !important;
+    }
+    .about-images{
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .carousel-content-p-wrapper p{
+        font-size: 3.6vw ;
+    }
+    .carousel-content h2 {
+        font-family: "Metropolis 1920";
+        font-size: 7vw !important ;
+    }
+    .carousel-content h2 {
+        line-height:1;
+    }
+    .icons-elem{
+        display: none ;
+    }
+    .offcanvas-header {
+        display: flex;
+        align-items: center;
+        padding: 28px 27px;
+    }
+
+    .logo a {
+        padding-left: 20px;
+    }
     .main-menu-wrapper{
         display: none;
     }    
@@ -603,14 +1032,132 @@ img{
     }
     .offcanvas-header .btn-close{
         padding: calc(var(--bs-offcanvas-padding-y)* .5) calc(var(--bs-offcanvas-padding-x)* .5);
-        margin: -10px 0 0 180px;
     }
     .mobile-banner{
-        display: none;
+        display: none !important;
     }
     .carousel-banner{
+        display: block !important;
+    }
+    
+}
+/*mobile screen*/
+@media (min-width:319px) {
+   
+    .booking-block{
+        margin-top: 20px ;
+    }
+    .footer-text{
+        max-width: 37vw;
+
+    }
+    .our-menu-block-text h5{
+        font-size: 3.3vw;
+    }
+    .booking-image{
+        display: none;
+    }
+    .reviews-block{
+        height: 80vw;
+    }
+    .specialities-background-image{
+        display: none;
+    }
+    .about-images, 
+    .specialities-block{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .carousel-content {
+        position: absolute;
+        top: 25%;
+        left: 12%;
+    }
+    .banner-button {
+        width: 14vw;
+        height: 4vw;
+    }
+    .carousel-content-p-wrapper p {
+        font-family: "Josefin Sans";
+        font-size: 3.8vw;
+    }
+    .carousel-content h2 {
+        line-height:1;
+    }
+
+    .carousel-content h2 {
+        font-family: "Metropolis 1920";
+        font-size: 12vw;
+    }
+    .mobile-banner{
+        height: 100vh;
+    }
+    .mobile-banner-images{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .mobile-banner-images img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .mobile-banner{
         display: block;
     }
+    .carousel-banner{
+        display: none;
+    }
+    .logo {
+        text-align: center;
+        padding-left: 10px;
+    }
+    .offcanvas {
+        max-width: 60% ;
+    }
+    .offcanvas-title{
+        font-size: 2vw;
+    }
+    .offcanvas-header {
+        display: flex;
+        align-items: center;
+        padding: 36px 0 1px 25px;
+    }
+    .main-nav-custom ul li a {
+        font-size: 1.8vw;
+    }
+    .icons-elem{
+        display: none;
+    }
+    .offcanvas-header .btn-close {
+    padding: calc(var(--bs-offcanvas-padding-y)* .5) calc(var(--bs-offcanvas-padding-x)* .5);
+    margin: calc(-.5* var(--bs-offcanvas-padding-y)) calc(1.5* var(--bs-offcanvas-padding-x)) calc(-.5* var(--bs-offcanvas-padding-y)) auto;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

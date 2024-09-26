@@ -90,3 +90,17 @@ flatpickr("input[type=time-local]",{
 })
 
  
+
+
+//for tooltip//
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+//search 
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
